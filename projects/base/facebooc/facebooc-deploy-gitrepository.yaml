@@ -1,5 +1,5 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta1
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: facebooc-deploy
@@ -8,5 +8,5 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/lfs269/facebooc-deploy
+  url: https://github.com/joaquimcampos/facebooc-deploy
 
