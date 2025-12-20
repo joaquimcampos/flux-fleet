@@ -5,7 +5,10 @@ metadata:
   name: instavote-deploy
   namespace: instavote
 spec:
-  interval: 1m0s
+  interval: 1m
   ref:
     branch: main
-  url: https://github.com/joaquimcampos/instavote-deploy
+  timeout: 1m0s
+  secretRef:
+    name: github-instavote-deploy
+  url: https://github.com/joaquimcampos/instavote-deploy.git
