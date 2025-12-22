@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: instavote-listener-nodeport
+  namespace: instavote
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 31235 # Use a different port than Flux
+  selector:
+    # This selector must match the pod created by your EventListener
+    eventlistener: instavote-listener
